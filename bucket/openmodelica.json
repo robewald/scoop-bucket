@@ -12,9 +12,7 @@
             "url": "https://build.openmodelica.org/omc/builds/windows/releases/1.16/5/32bit/OpenModelica-v1.16.5-32bit.exe#/dl.7z",
             "hash": "md5:cb3e2b791c08c507d711f57b9085cbe1"
         },
-	"pre_install": [
-	    "Move-Item \"\\_\\$INSTDIR\" $dir"
-	]
+	"extract_dir": "\\_\\`$INSTDIR`"
     },
     "bin": [
         "bin\\OMEdit.exe",
