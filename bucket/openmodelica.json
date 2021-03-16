@@ -6,34 +6,47 @@
     "architecture": {
         "64bit": {
             "url": "https://build.openmodelica.org/omc/builds/windows/releases/1.16/5/64bit/OpenModelica-v1.16.5-64bit.exe#/dl.7z",
-            "hash": "md5:7f57696b87d887df9d53721392cb4807"
+            "hash": "md5:7f57696b87d887df9d53721392cb4807",
+	    "pre_install": [
+		"Move-Item \"$dir\\_\\`$INSTDIR`\\*\" \"$dir\"",
+		"Remove-Item -Path \"$dir\\_\" -Force -Recurse"
+	    ]
         },
         "32bit": {
             "url": "https://build.openmodelica.org/omc/builds/windows/releases/1.16/5/32bit/OpenModelica-v1.16.5-32bit.exe#/dl.7z",
-            "hash": "md5:cb3e2b791c08c507d711f57b9085cbe1"
-        },
-	"extract_dir": "\\_\\`$INSTDIR`"
+            "hash": "md5:cb3e2b791c08c507d711f57b9085cbe1",
+	    "pre_install": [
+		"Move-Item \"$dir\\_\\`$INSTDIR`\\*\" \"$dir\"",
+		"Remove-Item -Path \"$dir\\_\" -Force -Recurse"
+	    ]
+        }
     },
     "bin": [
-        "bin\\OMEdit.exe",
-        "bin\\OMNotebook.exe",
-        "bin\\OMOptim.exe",
-        "bin\\OMPlit.exe",
-        "bin\\OMShell.exe",
-        "bin\\OMSimulator.exe"
+	"bin\\BreakProcess.exe",
+	"bin\\OMCppOSUSimulation.exe",
+	"bin\\OMOptim.exe",
+	"bin\\OMSimulator.exe",
+	"bin\\FMIWrapper.exe",
+	"bin\\OMEdit.exe",
+	"bin\\OMPlot.exe",
+	"bin\\omc-diff.exe",
+	"bin\\OMCZeroMQ.exe",
+	"bin\\OMNotebook.exe",
+	"bin\\OMShell.exe",
+	"bin\\omc.exe"
     ],
     "shortcuts": [
         [
-            "OMEdit.exe",
-            "OpenModelica"
+            "bin\\OMEdit.exe",
+            "OpenModelica Edit"
         ],
         [
-            "cmd\\git-gui.exe",
-            "Git GUI"
+            "bin\\OMNotebook.exe",
+            "OpenModelica Notebook"
         ],
         [
-            "cmd\\gitk.exe",
-            "gitk"
+            "bin\\OMShell.exe",
+            "OpenModelica Shell"
         ]
     ],
     "checkver": {
