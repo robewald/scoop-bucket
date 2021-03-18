@@ -1,0 +1,35 @@
+{
+    "version": "3.1.405",
+    "homepage": "https://www.microsoft.com/net/",
+    "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/3.1.407/dotnet-sdk-3.1.405-win-x64.zip"
+        },
+        "32bit": {
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/3.1.407/dotnet-sdk-3.1.405-win-x86.zip"
+        }
+    },
+    "bin": "dotnet.exe",
+    "env_set": {
+        "DOTNET_ROOT": "$dir"
+    },
+    "checkver": {
+        "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json",
+        "jsonpath": "$..releases-index[?(@.support-phase == 'lts')].latest-sdk"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-x86.zip"
+            }
+        },
+        "hash": {
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/checksums/$version-sdk-sha.txt"
+        }
+    }
+}
