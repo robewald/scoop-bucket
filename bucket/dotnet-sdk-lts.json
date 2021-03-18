@@ -5,10 +5,10 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/3.1.407/dotnet-sdk-3.1.405-win-x64.zip"
+            "url": "https://download.visualstudio.microsoft.com/download/pr/095412cb-5d87-4049-9659-35d917835355/a889375c044572335acef05b19473f60/dotnet-sdk-3.1.407-win-x64.zip"
         },
         "32bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Sdk/3.1.407/dotnet-sdk-3.1.405-win-x86.zip"
+            "url": "https://download.visualstudio.microsoft.com/download/pr/37b739a1-6cf3-4829-a7d0-6b4130eb8bc5/877cc5fe22c449b1d55cc309e8f82fe5/dotnet-sdk-3.1.407-win-x86.zip"
         }
     },
     "bin": "dotnet.exe",
